@@ -8,5 +8,5 @@ Neste projeto desenvolvemos um ecommerce a fim de aplicarmos o que aprendemos du
     [PostgreSQL](https://postgresql.org/)
 
 ### Rodando...
- - Para a criação de tabelas no banco de dados atraves do prisma digite no terminal o seguinte comando: yarn prisma migrate dev
- - Para rodar o projeto digite no terminal: yarn dev
+ - Para a criação de tabelas no banco de dados atraves do prisma digite no terminal o seguinte comando:[ yarn prisma migrate dev]
+ - Para rodar o projeto digite no terminal: [yarn dev]
