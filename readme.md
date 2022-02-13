@@ -2,7 +2,7 @@
 
 Neste projeto desenvolvemos um ecommerce a fim de aplicarmos o que aprendemos durante o semestre sobre manipulação e criação de banco de dados.
 
-### Tecnologias
+## Tecnologias
     [Nodejs](https://nodejs.org/en/)
     [Prisma](https://prisma.io/)
     [PostgreSQL](https://postgresql.org/)
