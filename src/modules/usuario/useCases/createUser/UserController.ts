@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { CreateUserCase } from "./CreateUserCase";
 
-export class CreateClassController{
+export class CreateUserController{
     async handle(request: Request, response: Response){
         const { username, password} = request.body
         
@@ -9,6 +9,8 @@ export class CreateClassController{
         const result = await createUserCase.execute({
             username, 
             password
-        })
+        });
+
+        return response.json(result);
     }
 }

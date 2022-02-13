@@ -10,30 +10,26 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model usuario{
-  id        String @id    @default(uuid())
-  username  String @unique
-  password  String
+model usuario {
+  id       String @id @default(uuid())
+  username String @unique
+  password String
 
-   @@map("usuario")
+  compra compra[]
 }
 
-model produto{
-  id           String @id    @default(uuid())
-  name         String @unique
-  description  String
-  amount       Integer
-  value        Float
-
-   @@map("produto")
+model produto {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String
+  value       Float
+  compra      compra[]
 }
 
-model compra{
-  id           String @id    @default(uuid())
-  id_usuario   String @unique
-  id_produto   String
-  item_name    Integer
-  value        Float
+model compra {
+  id         String  @id @default(uuid())
+  id_usuario String  @unique
+  user       usuario @relation(fields: [id_usuario], references: [id])
+  id_produto String
+  product    produto @relation(fields: [id_produto], references: [id])
 }
-
-
