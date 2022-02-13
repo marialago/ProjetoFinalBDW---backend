@@ -14,4 +14,26 @@ model usuario{
   id        String @id    @default(uuid())
   username  String @unique
   password  String
+
+   @@map("usuario")
 }
+
+model produto{
+  id           String @id    @default(uuid())
+  name         String @unique
+  description  String
+  amount       Integer
+  value        Float
+
+   @@map("produto")
+}
+
+model compra{
+  id           String @id    @default(uuid())
+  id_usuario   String @unique
+  id_produto   String
+  item_name    Integer
+  value        Float
+}
+
+
