@@ -27,9 +27,9 @@ model produto {
 }
 
 model compra {
-  id         String  @id @default(uuid())
-  id_usuario String  @unique
-  user       usuario @relation(fields: [id_usuario], references: [id])
+  id         String   @id @default(uuid())
+  id_usuario String?  @unique
+  user       usuario? @relation(fields: [id_usuario], references: [id])
   id_produto String
-  product    produto @relation(fields: [id_produto], references: [id])
+  product    produto  @relation(fields: [id_produto], references: [id])
 }
