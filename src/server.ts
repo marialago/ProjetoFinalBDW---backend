@@ -1,6 +1,6 @@
 import express, { NextFunction, Request, response, Response } from "express";
 import "express-async-errors";
-import { routes } from "./routes";
+import { routes } from "./routes/routes";
 
 const app = express();
 
