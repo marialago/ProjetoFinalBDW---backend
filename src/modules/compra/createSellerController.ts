@@ -4,7 +4,8 @@ import { CreateSellerCase } from "./createSellerCase";
 
 export class CreateSellerController{
     async handle(request: Request, response: Response){
-        const { id_usuario, id_produto } = request.body;
+        const { id_produto } = request.body;
+        const {id_usuario} = request;
         const createSellerCase = new CreateSellerCase();
 
 

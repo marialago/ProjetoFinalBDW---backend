@@ -1,4 +1,5 @@
 import { Router } from "express";
+import { ensureAuthenticateUser } from "./middlewares/ensureAuthenticateUser";
 import { AuthenticateUserCase } from "./modules/acount/authenticateUser/authenticateUserCase";
 import { AuthenticateUserController } from "./modules/acount/authenticateUser/authenticateUserController";
 import { CreateSellerController } from "./modules/compra/createSellerController";
@@ -15,6 +16,6 @@ routes.post("/authenticate", authenticateUserController.handle);
 
 routes.post("/user/", createUserController.handle);
 
-routes.post("/seller", createSellerController.handle);
+routes.post("/seller", ensureAuthenticateUser, createSellerController.handle);
 
 export{ routes };
