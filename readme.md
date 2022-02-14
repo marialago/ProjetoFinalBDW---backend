@@ -3,6 +3,7 @@
 Neste projeto desenvolvemos um ecommerce a fim de aplicarmos o que aprendemos durante o semestre sobre manipulação e criação de banco de dados.
 
 ## Tecnologias
+    - TypeScript https://www.typescriptlang.org/
     - Nodejs https://nodejs.org/en/
     - Prisma https://prisma.io/
     - PostgreSQL https://postgresql.org/
