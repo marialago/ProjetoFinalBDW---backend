@@ -1,6 +1,6 @@
 ## Backend do projeto da disciplina de banco de dados para WEB
 
-Neste projeto desenvolvemos um ecommerce a fim de aplicarmos o que aprendemos durante o semestre sobre manipulação e criação de banco de dados.
+Neste projeto desenvolvemos o backend ecommerce a fim de aplicarmos o que aprendemos durante o semestre sobre manipulação e criação de banco de dados.
 
 ## Tecnologias
     - TypeScript https://www.typescriptlang.org/
