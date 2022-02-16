@@ -1,27 +1,20 @@
-version: '3'
+version: '2'
+
 
 services:
-  teste-postgres-compose:
+  oracle_reels:
     image: postgres
-    environment:
-      POSTGRES_PASSWORD: "admin"
+    container_name: postgresql-bdw
     ports:
       - "15432:5432"
-    networks:
-      - postgres-compose-network
-      
-  teste-pgadmin-compose:
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: "marialagoufrn@gmail.com"
-      PGADMIN_DEFAULT_PASSWORD: "admin2022"
+  bdwbackend:
+    image: bdw-backend
+    container_name: bdwbackend
     ports:
-      - "16543:80"
+      - 5432:5432
+    expose:
+      - 5432
+    environment:
+      - spring.profiles.active=local-docker
     depends_on:
-      - teste-postgres-compose
-    networks:
-      - postgres-compose-network
-
-networks: 
-  postgres-compose-network:
-    driver: bridge
+      - postgresql
