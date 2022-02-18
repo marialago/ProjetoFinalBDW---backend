@@ -31,3 +31,9 @@ docker run -d --name some_postgres -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=db 
         - caso esse comando não rode, digitar o yarn prisma generate, esse comando irá fazer a formatação e criar as tabelas no prisma a partir da pasta de migrations
  
  - Para rodar o projeto digite no terminal: yarn dev
+
+ Componentes do grupo:
+    Lucas Calixto
+    Maria Lago
+    Matheus Dantas
+    Tiago Oliveira
