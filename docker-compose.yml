@@ -2,8 +2,8 @@ version: '2'
 
 
 services:
-  oracle_reels:
-    image: postgres
+    postegresql:
+    image: latest
     container_name: postgresql-bdw
     ports:
       - "15432:5432"

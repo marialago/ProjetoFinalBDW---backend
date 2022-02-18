@@ -19,6 +19,13 @@ Neste projeto desenvolvemos o backend ecommerce a fim de aplicarmos o que aprend
     - yarn install -g typescript
     
     - yarn tsc --init
+
+- iniciando o a conexão do banco de dados
+digitar no powershel para rodar a porta do banco de dados
+docker run -d --name some_postgres -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=db -p 5432:5432 postgres:latest
+
+- copiar a URL para importar o banco no beekeper: postgresql://postgres:admin@localhost:5432/db?schema=public
+
     
 - digite no terminal o seguinte comando para iniciar a criação de tabelas:  yarn prisma migrate dev
         - caso esse comando não rode, digitar o yarn prisma generate, esse comando irá fazer a formatação e criar as tabelas no prisma a partir da pasta de migrations

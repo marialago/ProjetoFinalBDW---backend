@@ -14,7 +14,6 @@ model usuario {
   id       String @id @default(uuid())
   username String @unique
   password String
-
   compra compra[]
 }
 
