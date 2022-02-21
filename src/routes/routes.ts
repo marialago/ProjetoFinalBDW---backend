@@ -16,7 +16,7 @@ const findAllPurchase = new FindAllPurchaseController();
 
 routes.post("/authenticate", authenticateUserController.handle);
 
-routes.post("/user/", createUserController.handle);
+routes.post("/user", createUserController.handle);
 
 routes.post("/seller", ensureAuthenticateUser, createSellerController.handle);
 
